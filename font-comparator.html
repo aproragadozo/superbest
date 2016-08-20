@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="font viewer, fonts, Google font, Google font viewer, best fonts, colorpicker">
+    <meta name="description" content="A simple font viewer to contrast typefaces.">
+    <title>Blücher!</title>
+    
+    <link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="awesomplete/awesomplete.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Podkova:700|Neuton" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="font-css/probe-css.css" type="text/css"/>
+    <script type="text/javascript" src="awesomplete/awesomplete.min.js" async></script>
+  </head>
+  <body>
+  <div class="modal fade" id="lightbox" tabindex="-1" role="dialog" aria-labelledby="lightbox-label" aria-hidden="true" >
+    <div class="modal-dialog">
+      <div class="modal-content" id="bigModal">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="lightbox-label">Enter font names, pick colors</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div id="starter" class="row">
+                    <label for="font-one" class="col-xs-12 col-sm-offset-1 col-sm-3">Enter font #1</label>
+                    <input type="text" name="font-one" id="font-one" class="awesomplete col-xs-12 col-sm-6" placeholder="Type at least 2 characters" autofocus autocomplete="on">
+            </div>
+                
+                <div class="modal fade" id="color-1" tabindex="-1" role="dialog" aria-labelledby="color-1-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                 <h4 class="modal-title" id="color-1-label">Click a color to pick it</h4>
+                            </div>
+                            <div class="modal-body" id="colorDiv1">
+                                <canvas id="canvas_picker" width="600" height="300" style="border: 1px solid black;"></canvas>
+                                <div id="rgb1">RGB: <input type="text"/></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#color-1">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#color-1">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="color1" type="button" class="btn btn-default col-xs-12 col-sm-offset-3 col-sm-6" data-toggle="modal" data-target="#color-1" style="margin-top: 0.5vmin; margin-bottom: 2vmin;">Pick a color for font #1</button>
+                <div id="second" class="row">
+                    <label for="font-two" class="col-xs-12 col-sm-offset-1 col-sm-3">Enter font #2</label>
+                    <input type="text" name="font-two" id="font-two" class="awesomplete col-xs-12 col-sm-6" placeholder="Type at least 2 characters" autocomplete="on">
+                </div>
+                <div class="modal fade" id="color-2" tabindex="-1" role="dialog" aria-labelledby="color-2-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="overflow: hidden;">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="color-2-label">Click a color to pick it</h4>
+                            </div>
+                            <div class="modal-body" id="colorDiv2">
+                                <canvas id="canvas2" width="600" height="300" style="border: 1px solid black;"></canvas>
+                                <div id="rgb2">RGB: <input type="text"/></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal" data-target="#color-2">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#color-2">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="color2" type="button" class="btn btn-default col-xs-12 col-sm-offset-3 col-sm-6" data-toggle="modal" data-target="#color-2" style="margin-top: 0.5vmin; margin-bottom: 2vmin;">Pick a color for font #2</button>
+                <div class="row">
+                    <label for="character" class="col-xs-12 col-sm-4">Type a character to compare</label>
+                    <input type="text" name="char" id="character" class="col-xs-12 col-sm-6" placeholder="Type a character to compare" autocomplete="off" maxlength="1"/>
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer container-fluid">
+          <div class="row">
+            <button type="button" class="btn btn-primary col-xs-12 col-md-offset-1 col-md-5" data-dismiss="modal" id="gomb">Compare!</button>
+            <button type="button" class="btn btn-default col-xs-12 col-md-5" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+        <div>
+            <button type="button" id="top" class="col-xs-12 col-md-offset-3 col-md-6 btn btn-success" style="background-color: #f89f86;" data-toggle="modal" data-target="#lightbox"><span id="superbest">SuperBest</span><span id="copytext">Compare webfonts in detail.</span>Pick 2 Google Webfonts and a character to compare.<span id="startbtn">START THE FONT-COMPARATOR</span></button>
+        </div>
+        
+    </div>
+    <div id="wrapper" class="row">
+        <div id="egyes" class="col-xs-12 col-sm-6"><p id="na"><span id="bu"></span></p></div>
+        <div id="kettes" class="col-xs-12 col-sm-6"><p id="no"><span id="da"></span></p></div>
+        <div class="family col-xs-12 col-sm-6"></div>
+        <div class="family col-xs-12 col-sm-6"></div>
+    </div>
+    
+    <div id="reset" class="row">
+        <button type="button" class="col-md-offset-3 col-md-6 btn btn-primary" style="font-weight: bolder; font-size: 2em;" id="resetButton" onClick="window.location.reload()">Reset</button>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="font-js/font-comparator-refactor.js"></script>
+  </body>
+</html>

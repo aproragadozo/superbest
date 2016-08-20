@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>tester</title>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Podkova:400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'> -->
+    <style>
+        div {
+            width: 60vmin;
+            border: 1px solid black;
+            float: left;
+        }
+        p {
+            font-size: 15vmin;
+            font-family: abril-fatface;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Shrimp</h1>
+        <p id="pod">Podkova<span style="font-family: source-sans-pro; visibility: hidden;"></span></p>
+    </div>
+    <div>
+        <h1>Giant</h1>
+        <p id="kov" style="font-family: source-sans-pro;">Podkova<span style="font-family: abril-fatface; visibility: hidden;"></span></p>
+    </div>
+    <div><p><span></span></p></div>
+	<div><img id="rad" style="width:350px;" src="zebra.png"></div>
+</body>
+<script src="http://use.edgefonts.net/source-sans-pro.js"></script>
+<script src="http://use.edgefonts.net/abril-fatface.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="font-js/jquery.imageLens.js"/>
+
+<script>
+    var arr = ["z", "lq", "f", "j", "kl"];
+    function foo(a, b, c) {
+        return a +"/"+ b +"/"+ c;
+    }
+    var results = arr.map(foo.bind(null, "x", "y"));
+    console.log(results);
+</script>
+<script> $(document).ready( function() {$("#rad").imageLens({ lensSize: 200 });});</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Font-Squirrel-Fonts</title>
+  <meta charset="utf-8"/>
+	<meta name="viewport" content="user-scalable=0, initial-scale=1.0"/>
+	<title>Whammo</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</head>
+<body>
+	<h1>TiT</h1>
+<div id="content"></div>
+<script>
+    // Using YQL and JSONP
+$.ajax({
+    url: "http://query.yahooapis.com/v1/public/yql",
+ 
+    // The name of the callback parameter, as specified by the YQL service
+    jsonp: "callback",
+ 
+    // Tell jQuery we're expecting JSONP
+    dataType: "jsonp",
+ 
+    // Tell YQL what we want and that we want JSON
+    data: {
+        q: "select title,abstract,url from search.news where query=\"cat\"",
+        format: "json"
+    },
+ 
+    // Work with the response
+    success: function( response ) {
+        console.log( response ); // server response
+    }
+});
+</script>
+</body>
+</html>

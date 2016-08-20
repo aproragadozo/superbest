@@ -1,0 +1,382 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    max-height: 100%;
+    overflow-x: hidden;
+    /*font-size: 100%;
+    line-height: 100%;*/
+    /*min-height: 100%;
+    height: 100%;*/
+}/*
+body {
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+#dimmer {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: black;
+    position: absolute;
+    opacity: 0.3;
+    top: 0;
+    z-index: 99;
+}
+#lightbox {
+    z-index: 100;
+    position: fixed;
+    top:30vh;
+    left:50vw;
+    transform:translate(-50%, -50%);
+    background: tomato;
+    color: white;
+    width: 20%;
+    min-height: 8%;
+    height: 34vh;
+    max-height: 100%;
+    padding: 1%;
+}*/
+/*#kiskutya, #second, #nagykutya, #character, #gomb {
+    display: none;
+}
+#kiskutya {
+    position: relative;
+    top: -0.3vw;
+}
+#second{
+    position: relative;
+    top: 1.4vw;
+}
+#nagykutya {
+    position: relative;
+    top: 0.9vw; 
+}
+#character, #gomb {
+    position: relative;
+    top: 2.3vw;
+}
+
+.form-element {
+  position:absolute;
+  z-index: 20;
+  display: block;
+  top:20%;
+  left:60%;
+  transform:translate(-50%, -50%);
+  -webkit-transform:translate(-50%, -50%);
+  width: 20vw;
+}
+
+#wrapper {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%);
+    width: 90vw;
+    height: 100%;
+}
+#positioner {
+    position: relative;
+    height: 100%;
+}*/
+canvas {
+    width: 100%;
+    height: auto;
+}
+#top {
+    font-family: Podkova;
+    font-weight: bolder;
+    font-size: 2vmin;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%);
+    border-radius: 1vw;
+}
+#top span {
+    display: block;
+}
+
+#superbest {
+	font-family: Neuton;
+	font-size: 8vw;
+	letter-spacing: 0.3vmin;
+}
+#copytext { font-size: 3vmin;}
+#startbtn { font-size: 5vmin; color: black;}
+#bigModal {
+    height: 70vmin;
+}
+#reset {
+  visibility: hidden;
+  z-index: 2000;
+  font-family: Podkova;
+  text-transform: uppercase;
+  /*width: 80vw;*/
+}
+/*input[type="text"] {
+    width: 25vmin;
+}
+/* we'll use some other validation UI
+:invalid:after {
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 1vw;
+    bottom: 5vw;
+    color: #fff;
+    content: "Invalid font name.";
+    left: 0.3vw;
+    padding: 1vw 2vw;
+    position: absolute;
+    z-index: 98;
+    width: 5vmin;
+}
+:-moz-ui-invalid:after {
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 1vw;
+    bottom: 5vw;
+    color: #fff;
+    content: "Invalid font name.";
+    left: 0.3vw;
+    padding: 1vw 2vw;
+    position: absolute;
+    z-index: 98;
+    width: 5vmin;
+}*/
+#colorDiv1, #colorDiv2 {
+    min-height: 40vh;
+}
+.family {
+    display: inline-block;
+    font-size: 2.5vw;
+    font-family: inherit;
+    font-weight: 900;
+    color: inherit;
+}
+#wrapper {
+    max-height: 100vh;
+}
+#wrapper div:nth-of-type(3) {
+    text-align: right;
+}
+#wrapper div:nth-of-type(4) {
+    text-align: left;
+}
+#bu, #da {
+    visibility: hidden;
+	
+}
+#egyes, #kettes {
+    /*position: absolute;*/
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-size: 30vw;
+    top: -10vh;
+    line-height: normal;
+    transition: transform 2s ease;
+    max-height: 100%;
+}
+#egyes {
+    /*top: 5%; left: 0;*/
+    color: red;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    z-index: 10;
+}
+#kettes {
+   /* top: 5%; left: 75%;*/
+    color: blue;
+    z-index: 9;
+}
+.transformed1 {
+    /*position: absolute;
+    top: 50%;
+    left: 50%;*/
+    transform: translateX(50%);
+    /*transform-origin: top left;*/
+    -webkit-transform-origin: center;
+    -webkit-transform: translateX(50%);
+    transform-style: preserve-3D;
+    -webkit-transform-style: preserve-3D;
+}
+.transformed2 {
+    /*position: absolute;
+    top: 50%;
+    left: 50%;*/
+    transform: translateX(-50%);
+    /*transform-origin: top left;*/
+    -webkit-transform-origin: center;
+    -webkit-transform: translateX(-50%);
+    transform-style: preserve-3D;
+    -webkit-transform-style: preserve-3D;
+}
+.transformY1 {
+    transform: translateY(50%);
+    -webkit-transform-origin: center;
+    -webkit-transform: translateY(50%);
+    transform-style: preserve-3D;
+    -webkit-transform-style: preserve-3D;
+}
+.transformY2 {
+    transform: translateY(-50%);
+    -webkit-transform-origin: center;
+    -webkit-transform: translateY(-50%);
+    transform-style: preserve-3D;
+    -webkit-transform-style: preserve-3D;
+}
+
+@media all and (max-width:990px) {
+    #egyes, #kettes {
+        font-size: 45vw;
+    }
+    #reset {
+        position: absolute;
+        left: 45vw;
+        top: 80vh;
+    }
+    #copytext{
+        font-size: 4vw;
+        word-wrap: break-word;
+    }
+    #top {
+        font-size: 2.5vw;
+    }
+}
+@media all and (min-width:990px) {
+    #top {
+        left: 25vw;
+    }
+	#resetButton, .family {
+		top: -5vh;
+	}
+}
+@media all and (max-width:760px) {
+    #bigModal {
+        height: 100vh;
+    }
+    .family {
+        position: absolute;
+        top: 0;
+        float: left;
+        font-size: 3vh;
+    }
+    #egyes, #kettes {
+        font-size: 90vw;
+        /*top: 20vh;
+        left: 20vw;*/
+    }
+    #reset {
+        position: absolute;
+        left: 35vw;
+        top: 20vh;
+    }
+}
+/*.colorPicker {
+    width: 0.7vw;
+    height: 0.7vw;
+    /*float: left;
+    margin: 10px auto 20px;
+}
+.colorPicker .track {
+    background:     #EFEFEF url(text-color.png) no-repeat 50% 50%;
+    height:         150px;
+    width:          150px;
+    padding:        10px;
+    position:       absolute;
+    cursor:         crosshair;
+    float:          left;
+    display:        none;
+    border:         1px solid #ccc;
+    z-index:        10;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    border-radius: 150px;
+
+}
+
+.colorPicker .color:first-of-type {
+    width:          0.6vw;
+    height:         0.6vw;
+    padding:        1px;
+    border:         1px solid #ccc;
+    display:        block;
+    top: 0.2vw;
+    position:       relative;
+    z-index:        11;
+    background-color: #EFEFEF;
+    -webkit-border-radius: 0.7vw;
+    -moz-border-radius: 0.7vw;
+    border-radius: 0.7vw;
+    cursor: pointer;
+}
+
+.colorPicker .colorInner:first-of-type {
+    width:          10vw;
+    height:         1vw;
+    position: absolute;
+    top: -0.4vw;
+    left: 1vw;
+    padding-bottom: 0.5vw;
+    padding-left: 0.4vw;
+    -webkit-border-radius: 0.7vw;
+    -moz-border-radius: 0.7vw;
+    border-radius: 0.7vw;
+}
+.colorPicker .color:last-of-type {
+    width:          0.6vw;
+    height:         0.6vw;
+    padding:        1px;
+    border:         1px solid #ccc;
+    display:        block;
+    top: 0.8vw;
+    position:       relative;
+    z-index:        11;
+    background-color: #EFEFEF;
+    -webkit-border-radius: 0.7vw;
+    -moz-border-radius: 0.7vw;
+    border-radius: 0.7vw;
+    cursor: pointer;
+}
+
+.colorPicker .colorInner:last-of-type {
+    width:          10vw;
+    height:         1vw;
+    position: absolute;
+    top: -0.3vw;
+    left: 1vw;
+    padding-bottom: 0.5vw;
+    padding-left: 0.4vw;
+    -webkit-border-radius: 0.7vw;
+    -moz-border-radius: 0.7vw;
+    border-radius: 0.7vw;
+}
+.colorPicker .colorInner:before {
+    color: inherit;
+    content: "\21D0";
+    position: relative;
+    left: -0.5vw;
+    vertical-align: bottom;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.colorPicker .dropdown {
+    list-style: none;
+    display: none;
+    width: 27px;
+    position: absolute;
+    top: 28px;
+    border: 1px solid #ccc;
+    left: 0;
+    z-index: 1000;
+}
+
+.colorPicker .dropdown li{
+    height: 25px;
+    cursor: pointer;
+}*/

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy-Font-Families</title>
+  <meta charset="utf-8"/>
+	<meta name="viewport" content="user-scalable=0, initial-scale=1.0"/>
+	<title>Whammo</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Mell</h1>
+<div id="content"></div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $.getJSON('https://www.googleapis.com/webfonts/v1/webfonts?sort=trending&key=AIzaSyCDe9HThI7KnVoHvEmffVwJ7D6VR8cFj1U', function(response) {
+        var fonts = document.querySelector('#content');
+        var container = document.createElement('div');
+
+        
+        var completerArr = [];
+        var p = document.createElement('p');
+        for (var item in response.items) {
+                //var p = document.createElement('p');
+                //var family = document.createTextNode(response.items[item].family);
+                //p.appendChild(family);
+                //container.appendChild(p);
+                completerArr.push(response.items[item].family);
+                }
+        p.innerHTML = completerArr.join(", ");
+        container.appendChild(p);
+        fonts.appendChild(container);
+        console.log(completerArr.length);
+    });
+});
+</script>
+<!-- <script src="https://www.googleapis.com/webfonts/v1/webfonts?sort=trending&key=AIzaSyCDe9HThI7KnVoHvEmffVwJ7D6VR8cFj1U&jsoncallback=processJSON"></script>
+ <script src="http://api.flickr.com/services/feeds/photos_public.gne?
+jsoncallback=processJSON&tags=monkey&tagmode=any&format=json"></script> -->
+</body>
+</html>
