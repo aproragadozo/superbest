@@ -100,7 +100,8 @@ var compareFonts = function() {
     var fontLink = document.createElement("link");
     fontLink.rel = "stylesheet";
     fontLink.type = "text/css";
-    fontLink.href = "http://fonts.googleapis.com/css?family=" + fontEgy + "|" + fontKetto;
+    // turns out the http prefix needs to be scrapped for github
+    fontLink.href = "//fonts.googleapis.com/css?family=" + fontEgy + "|" + fontKetto;
     document.head.appendChild(fontLink);
 
     // a css-be viszont az eredeti user input kell, plusjel nélkül
