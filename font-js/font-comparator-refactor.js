@@ -1,7 +1,5 @@
-// egyenként megjelenítendő elemek
-// var kiskutya = document.querySelector('#kiskutya');
 var second = document.querySelector('#second');
-// var nagykutya = document.querySelector('#nagykutya');
+
 var gomb = document.querySelector("#gomb");
 //már itt definiáljuk a két inputot az awesomplete kedvéért
 var firstFont = document.querySelector('#font-one');
@@ -81,26 +79,6 @@ $(canvas2).click(function(event) {
     $('#rgb2 input').val(rgb);
 	$("#color2").css({"background-color": "rgb("+rgb+")", "color": "white"});
 });
-/* eventlisteners
-document.querySelector("#starter").addEventListener('keypress', function(event) {
-    if(event.keyCode === 13) {
-            kiskutya.style.display = "block";
-            //kiskutya.classList.add("form-element");
-            }
-    });
-
-document.querySelector("#second").addEventListener('keypress', function(event) {
-    if(event.keyCode === 13) {
-            nagykutya.style.display = "block";
-            //kiskutya.classList.add("form-element");
-            }
-    });
-
-var dimmer = document.querySelector("#dimmer");
-
-    dimmer.addEventListener("click", function() {
-        dimmer.parentNode.removeChild(this);
-    });*/
 var egyes = document.querySelector("#egyes");
 var kettes = document.querySelector("#kettes");
 var compareFonts = function() {
@@ -156,10 +134,6 @@ var compareFonts = function() {
 
     var font1 = document.createTextNode(document.querySelector("#font-one").value);
     var font2 = document.createTextNode(document.querySelector("#font-two").value);
-    //fontDivs[0].style.fontFamily = egyes.style.fontFamily;
-    //fontDivs[0].style.float = "left";
-    //fontDivs[1].style.fontFamily = kettes.style.fontFamily;
-    //fontDivs[1].style.float = "right";
     fontDivs[0].appendChild(font1);
     fontDivs[1].appendChild(font2);
     
