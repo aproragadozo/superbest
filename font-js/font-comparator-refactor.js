@@ -16,7 +16,7 @@ function awesompleter(lista, input1, input2){
 $(document).ready(function() {
     $.getJSON('https://www.googleapis.com/webfonts/v1/webfonts?sort=trending&key=AIzaSyCDe9HThI7KnVoHvEmffVwJ7D6VR8cFj1U ', function(response) {
         var fontNames = [];
-        for (var item in response.items) {
+        for (item in response.items) {
                 fontNames.push(response.items[item].family);
                 }
         return awesompleter(fontNames, firstFont, secondFont);
