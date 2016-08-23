@@ -21,13 +21,14 @@ $(document).ready(function() {
                 }
         return awesompleter(fontNames, firstFont, secondFont);
     });
-    // if viewed on mobile, rotate the screen back to portrait
-	// whenever orientation would change to landscape
+    // if viewed on mobile, lock the screen to portrait
 	var mql = window.matchMedia("screen and (max-width: 760px)");
 	if(mql.matches){
 		screen.orientation.lock('portrait-primary').then(null, function(error) {
 		alert(error);
 		});
+		screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+		screen.lockOrientationUniversal('portrait');
 	}
 });
 // make placeholder text fit in the inputs
