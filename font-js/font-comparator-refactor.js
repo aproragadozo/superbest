@@ -10,7 +10,7 @@ function awesompleter(lista, input1, input2){
     tom.list = lista;
     var jerry = new Awesomplete(input2);
     jerry.list = lista;
-};
+}
 // get the list of Google Fonts and push them into an array
 // the real mccoy: AIzaSyC1Z7Vx1iy-R8JqpjBR9AKT6CQIMxLbpik
 $(document).ready(function() {
