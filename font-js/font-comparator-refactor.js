@@ -23,7 +23,8 @@ $(document).ready(function() {
     });
     // if viewed on mobile, rotate the screen back to portrait
 	// whenever orientation would change to landscape
-	if (window.matchMedia("(orientation:landscape)").matches){
+	var mql = window.matchMedia("(orientation:landscape)");
+	if (mql.matches){
 		document.getElementsByTagName("body")[0].style.transform = "rotate(90deg)";
 	}
 });
