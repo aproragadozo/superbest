@@ -30,6 +30,7 @@ $(document).ready(function() {
 		screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 		screen.lockOrientationUniversal('portrait');
 	}
+	// doesnt work, no idea why
 });
 // make placeholder text fit in the inputs
 document.querySelector('#character').setAttribute('size', document.querySelector('#character').getAttribute('placeholder').length);
