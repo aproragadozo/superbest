@@ -25,7 +25,9 @@ $(document).ready(function() {
 	// whenever orientation would change to landscape
 	if(window.matchMedia("(max-width: 760px)").matches){
 		var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-		alert(orientation.type);
+		if(orientation.type==="landscape-primary" || "landscape-secondary"){
+			alert("Please go back to portrait, please.");
+		}
 	}
 });
 // make placeholder text fit in the inputs
