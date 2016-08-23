@@ -23,9 +23,11 @@ $(document).ready(function() {
     });
     // if viewed on mobile, rotate the screen back to portrait
 	// whenever orientation would change to landscape
-	var mql = window.matchMedia("(orientation:landscape)");
-	if (mql.matches){
-		document.getElementsByTagName("body")[0].style.transform = "rotate(90deg)";
+	if(window.matchMedia("(max-width: 760px)")){
+		var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
+		if (orientation === "landscape-primary" || "landscape-secondary") {
+			alert("Superbest!");
+		}
 	}
 });
 // make placeholder text fit in the inputs
