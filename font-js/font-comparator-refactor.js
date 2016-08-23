@@ -116,7 +116,7 @@ var compareFonts = function() {
     
     var fontDivs = document.querySelectorAll(".family");
     (function(rgb) {
-        egyes.style.fontFamily = "'" + document.querySelector("#font-one").value; + "'";
+        egyes.style.fontFamily = "'" + document.querySelector("#font-one").value + "'";
         //alert($('#rgb input').val());
         egyes.style.color = "rgb(" +$('#rgb1 input').val()+ ")";
         fontDivs[0].style.fontFamily = egyes.style.fontFamily;
