@@ -43,7 +43,7 @@ var ctx1 = canvas1.getContext('2d');
 
 var img = new Image();
 $(img).load(function() {ctx1.drawImage(img, 100,100,650,650,0,0,600,300);});
-img.src =} 'background.jpg';
+img.src = 'background.jpg';
 
 // 2. handle the click
 $(canvas1).click(function(event) {
