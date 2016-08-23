@@ -23,10 +23,8 @@ $(document).ready(function() {
     });
     // if viewed on mobile, rotate the screen back to portrait
 	// whenever orientation would change to landscape
-	if (window.matchMedia("(max-width: 760px)").matches){
-		if(window.innerHeight < window.innerWidth){
+	if (window.matchMedia("(max-width: 760px) and (orientation:landscape)").matches){
 			document.getElementsByTagName("body")[0].style.transform = "rotate(90deg)";
-		}
 	}
 });
 // make placeholder text fit in the inputs
