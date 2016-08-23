@@ -23,11 +23,12 @@ $(document).ready(function() {
     });
     // if viewed on mobile, rotate the screen back to portrait
 	// whenever orientation would change to landscape
-	if(window.matchMedia("(max-width: 760px)").matches){
+	var mql = window.matchMedia("screen and (max-width: 760px)");
+	if(mql.matches){
 		screen.orientation.lock('portrait-primary').then(null, function(error) {
 		alert(error);
 		});
-	
+	}
 });
 // make placeholder text fit in the inputs
 document.querySelector('#character').setAttribute('size', document.querySelector('#character').getAttribute('placeholder').length);
