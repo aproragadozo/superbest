@@ -24,10 +24,10 @@ $(document).ready(function() {
     // if viewed on mobile, rotate the screen back to portrait
 	// whenever orientation would change to landscape
 	if(window.matchMedia("(max-width: 760px)").matches){
-		var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-		if(orientation.type==="landscape-primary" || "landscape-secondary"){
-			alert("Please go back to portrait, please.");
-		}
+		document.documentElement.requestFullscreen();
+		screen.orientation.lock('portrait').then(null, function(error) {
+		document.exitFullscreen()
+});
 	}
 });
 // make placeholder text fit in the inputs
