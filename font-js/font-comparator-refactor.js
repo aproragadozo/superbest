@@ -25,7 +25,8 @@ $(document).ready(function() {
 	// whenever orientation would change to landscape
 	if (window.matchMedia("max-width: 760px").matches){
 		if(window.innerHeight > window.innerWidth){
-			document.getElementsByTagName("body")[0].style.transform = "rotate(90deg)";
+			//document.getElementsByTagName("body")[0].style.transform = "rotate(90deg)";
+			alert("Superbest!");
 		}
 	}
 });
