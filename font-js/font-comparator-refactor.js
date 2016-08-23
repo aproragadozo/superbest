@@ -24,11 +24,10 @@ $(document).ready(function() {
     // if viewed on mobile, rotate the screen back to portrait
 	// whenever orientation would change to landscape
 	if(window.matchMedia("(max-width: 760px)").matches){
-		document.documentElement.requestFullscreen();
-		screen.orientation.lock('portrait').then(null, function(error) {
-		document.exitFullscreen()
-});
-	}
+		screen.orientation.lock('portrait-primary').then(null, function(error) {
+		alert(error);
+		});
+	
 });
 // make placeholder text fit in the inputs
 document.querySelector('#character').setAttribute('size', document.querySelector('#character').getAttribute('placeholder').length);
@@ -41,7 +40,7 @@ var ctx1 = canvas1.getContext('2d');
 
 var img = new Image();
 $(img).load(function() {ctx1.drawImage(img, 100,100,650,650,0,0,600,300);});
-img.src = 'background.jpg';
+img.src =} 'background.jpg';
 
 // 2. handle the click
 $(canvas1).click(function(event) {
