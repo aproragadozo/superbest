@@ -23,7 +23,7 @@ $(document).ready(function() {
     });
     // if viewed on mobile, rotate the screen back to portrait
 	// whenever orientation would change to landscape
-	if(window.matchMedia("(max-width: 760px)")){
+	if(window.matchMedia("(max-width: 760px)").matches){
 		var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
 		if (orientation === "landscape-primary" || "landscape-secondary") {
 			alert("Superbest!");
