@@ -24,6 +24,8 @@ $(document).ready(function() {
     // if viewed on mobile, lock the screen to portrait
 	var mql = window.matchMedia("screen and (max-width: 760px)");
 	if(mql.matches){
+		// will have to offer a way to poor mobile users to exit full-screen if this works
+		document.documentElement.requestFullscreen();
 		screen.orientation.lock('portrait-primary').then(null, function(error) {
 		alert(error);
 		});
