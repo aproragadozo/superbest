@@ -21,10 +21,12 @@ $(document).ready(function() {
                 }
         return awesompleter(fontNames, firstFont, secondFont);
     });
-    // this doesn't seem to have any effect at all but I have no idea where els to put it
-    if (window.innerWidth < 500 && window.matchMedia("(orientation: landscape)").matches) {
-   	$("#intro").html("<p>Please turn your device upright. Cheers.</p>")
+    // Listen for orientation changes and ask the user to rotate the phone when it's in landscape
+window.addEventListener("orientationchange", function() {
+	if (window.innerWidth < 500 && window.matchMedia("(orientation: landscape)").matches) {
+   		$("#intro").html("<p>Please turn your device upright. Cheers.</p>");
 	}
+}, false);
 });
 // make placeholder text fit in the inputs
 document.querySelector('#character').setAttribute('size', document.querySelector('#character').getAttribute('placeholder').length);
