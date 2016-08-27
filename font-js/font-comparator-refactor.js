@@ -21,18 +21,9 @@ $(document).ready(function() {
                 }
         return awesompleter(fontNames, firstFont, secondFont);
     });
-    /* if viewed on mobile, lock the screen to portrait
-	var mql = window.matchMedia("screen and (max-width: 760px)");
-	if(mql.matches){
-		// will have to offer a way to poor mobile users to exit full-screen if this works
-		document.documentElement.requestFullscreen();
-		screen.orientation.lock('portrait-primary').then(null, function(error) {
-		alert(error);
-		});
-		screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
-		screen.lockOrientationUniversal('portrait');
+    if (window.matchMedia("(max-width: 760px) and (orientation: landscape)").matches) {
+   	document.querySelector("#intro").innerHTML("<p>Please turn your device back upright. Cheers.</p>")
 	}
-	// doesnt work, no idea why*/
 });
 // make placeholder text fit in the inputs
 document.querySelector('#character').setAttribute('size', document.querySelector('#character').getAttribute('placeholder').length);
