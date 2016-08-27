@@ -21,7 +21,7 @@ $(document).ready(function() {
                 }
         return awesompleter(fontNames, firstFont, secondFont);
     });
-    // if viewed on mobile, lock the screen to portrait
+    /* if viewed on mobile, lock the screen to portrait
 	var mql = window.matchMedia("screen and (max-width: 760px)");
 	if(mql.matches){
 		// will have to offer a way to poor mobile users to exit full-screen if this works
@@ -32,7 +32,7 @@ $(document).ready(function() {
 		screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
 		screen.lockOrientationUniversal('portrait');
 	}
-	// doesnt work, no idea why
+	// doesnt work, no idea why*/
 });
 // make placeholder text fit in the inputs
 document.querySelector('#character').setAttribute('size', document.querySelector('#character').getAttribute('placeholder').length);
