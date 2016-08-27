@@ -22,7 +22,7 @@ $(document).ready(function() {
         return awesompleter(fontNames, firstFont, secondFont);
     });
     // this doesn't seem to have any effect at all but I have no idea where els to put it
-    if (window.matchMedia("(orientation: landscape) and (max-width: 500px)").matches) {
+    if (window.innerWidth < 500 && window.matchMedia("(orientation: landscape)").matches) {
    	$("#intro").html("<p>Please turn your device upright. Cheers.</p>")
 	}
 });
