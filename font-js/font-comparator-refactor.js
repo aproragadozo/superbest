@@ -21,8 +21,9 @@ $(document).ready(function() {
                 }
         return awesompleter(fontNames, firstFont, secondFont);
     });
+    // this doesn't seem to have any effect at all but I have no idea where els to put it
     if (window.matchMedia("(max-width: 760px) and (orientation: landscape)").matches) {
-   	document.querySelector("#intro").innerHTML("<p>Please turn your device back upright. Cheers.</p>")
+   	$("#intro").innerHTML("<p>Please turn your device upright. Cheers.</p>")
 	}
 });
 // make placeholder text fit in the inputs
