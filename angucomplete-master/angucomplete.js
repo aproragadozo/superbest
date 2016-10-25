@@ -193,7 +193,7 @@ angular.module('angucomplete', [] )
 				$("<link/>")
 					.attr({rel: "stylesheet",
 							type: "text/css",
-							href: "http://fonts.googleapis.com/css?family=" + result.title})
+							href: "https://fonts.googleapis.com/css?family=" + result.title})
 					.appendTo($("head"));
 				
 				
