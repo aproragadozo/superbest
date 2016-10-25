@@ -1,0 +1,92 @@
+.bubble {
+	/*display:none;*/
+	/*
+	margin:12px 0;
+	position:absolute;
+	bottom:100%;
+	width:220px;
+	padding:10px 8px 8px 8px;
+	border:1px solid #bbb;
+	border-radius:3px;
+	background-color:#fff;
+	*/
+	z-index: 100;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	left: 3vmin;
+	top: -1vmin;
+	position: relative;
+    width: 25vmin;
+    height: 5vmin;
+    background-color: #fff;
+    border: 2px solid #666;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    -webkit-box-shadow: 2px 2px 4px #888;
+    -moz-box-shadow: 2px 2px 4px #888;
+    box-shadow: 2px 2px 4px #888;
+	}
+#egyes, #kettes {
+	-webkit-transition: 2s ease all;
+	transition: 2s ease all;
+	opacity: 1;
+	text-shadow: none;
+	transform: none;
+	-webkit-transform: none;
+	}
+#egyes.balra {
+	opacity: 0.3;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	z-index: 10;
+	transform: translateX(50%);
+	-webkit-transform-origin: center;
+	-webkit-transform: translateX(50%);
+	transform-style: preserve-3D;
+	-webkit-transform-style: preserve-3D;
+}
+#kettes.jobbra {
+	transform: translateX(-50%);
+	-webkit-transform-origin: center;
+	-webkit-transform: translateX(-50%);
+	transform-style: preserve-3D;
+	-webkit-transform-style: preserve-3D;
+}
+	/*
+.bubble:after, .bubble:before {
+	top:100%;
+	left:14px;
+	border:solid transparent;
+	content:' ';
+	height:0;
+	width:0;
+	position:absolute;
+	pointer-events:none;
+	}
+.bubble:after {
+	border-color:transparent;
+	border-top-color:#fff;
+	border-width:8px;
+	margin-left:-8px;
+	}
+.bubble:before {
+	border-color:transparent;
+	border-top-color:#bbb;
+	border-width:9px;
+	margin-left:-9px;
+	}
+.bubble.downside {
+	bottom:auto;top:100%;
+	}
+.bubble.downside:after,.bubble.downside:before {
+	top:auto;bottom:100%;
+	}
+.bubble.downside:after {
+	border-top-color:transparent;border-bottom-color:#fff;
+	}
+.bubble.downside:before {
+	border-top-color:transparent;border-bottom-color:#bbb;
+	}
+	*/
