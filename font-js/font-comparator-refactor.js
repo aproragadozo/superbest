@@ -1,9 +1,8 @@
-// egyenként megjelenítendő elemek
-// var kiskutya = document.querySelector('#kiskutya');
+// items to be displayed individually
 var second = document.querySelector('#second');
-// var nagykutya = document.querySelector('#nagykutya');
 var gomb = document.querySelector("#gomb");
-//már itt definiáljuk a két inputot az awesomplete kedvéért
+// defining the inputs aead of time
+// for awesomplete's benefit
 var firstFont = document.querySelector('#font-one');
 var secondFont = document.querySelector('#font-two');
 
@@ -66,12 +65,12 @@ $(img).load(function() {ctx2.drawImage(img, 100,100,650,650,0,0,600,300);});
 
 // 2. handle the click
 $(canvas2).click(function(event) {
-    // hova?
+    // where 
     var rect = canvas2.getBoundingClientRect();
     var x = event.pageX - rect.left;
     var y = event.pageY - rect.top;
-    console.log(x +","+ y);
-    // szín?
+    // console.log(x +","+ y);
+    // what color
     var imgData = ctx2.getImageData(x, y, 1, 1).data;
     console.log(imgData);
     var R = imgData[0];
@@ -81,34 +80,15 @@ $(canvas2).click(function(event) {
     $('#rgb2 input').val(rgb);
 	$("#color2").css({"background-color": "rgb("+rgb+")", "color": "white"});
 });
-/* eventlisteners
-document.querySelector("#starter").addEventListener('keypress', function(event) {
-    if(event.keyCode === 13) {
-            kiskutya.style.display = "block";
-            //kiskutya.classList.add("form-element");
-            }
-    });
 
-document.querySelector("#second").addEventListener('keypress', function(event) {
-    if(event.keyCode === 13) {
-            nagykutya.style.display = "block";
-            //kiskutya.classList.add("form-element");
-            }
-    });
-
-var dimmer = document.querySelector("#dimmer");
-
-    dimmer.addEventListener("click", function() {
-        dimmer.parentNode.removeChild(this);
-    });*/
 var egyes = document.querySelector("#egyes");
 var kettes = document.querySelector("#kettes");
 var compareFonts = function() {
         //dimmer.parentNode.removeChild(dimmer);
         document.querySelector('#top').style.display = 'none';
-        // generáljuk a google fontlinket a font-os user inputból
+        // generate google fonts link from font user input
 
-    // a font-os user input legyen pluszjellel szeparálva, ha több elemű
+    // add + as separator to words in font user input
     var fontEgy, fontKetto;
     if(document.querySelector("#font-one").value.split(' ').length > 0) {
          fontEgy = document.querySelector("#font-one").value.split(' ').join('+');
@@ -125,7 +105,7 @@ var compareFonts = function() {
     fontLink.href = "http://fonts.googleapis.com/css?family=" + fontEgy + "|" + fontKetto;
     document.head.appendChild(fontLink);
 
-    // a css-be viszont az eredeti user input kell, plusjel nélkül
+    // css needs the original font user input, without +
     // experimental self-executing function to css-style egyes font
     
     var fontDivs = document.querySelectorAll(".family");
