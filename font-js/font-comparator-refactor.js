@@ -1,3 +1,7 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
+// import express from 'express'
+
 // items to be displayed individually
 var second = document.querySelector('#second');
 var gomb = document.querySelector("#gomb");
@@ -13,9 +17,8 @@ function awesompleter(lista, input1, input2){
     jerry.list = lista;
 };
 // get the list of Google Fonts and push them into an array
-// the real mccoy: AIzaSyC1Z7Vx1iy-R8JqpjBR9AKT6CQIMxLbpik
 $(document).ready(function() {
-    $.getJSON('https://www.googleapis.com/webfonts/v1/webfonts?sort=trending&key=AIzaSyCDe9HThI7KnVoHvEmffVwJ7D6VR8cFj1U ', function(response) {
+    $.getJSON('https://www.googleapis.com/webfonts/v1/webfonts?sort=trending&key=KEY ', function(response) {
         var fontNames = [];
         for (var item in response.items) {
                 fontNames.push(response.items[item].family);
